@@ -14,6 +14,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Fixtures.HealthInsurance.Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fixtures.HealthInsurance.Products.Tests", "Fixtures.HealthInsurance.Products.Tests\Fixtures.HealthInsurance.Products.Tests.csproj", "{5A02C424-19FD-48C4-8B46-168493DFF863}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C6072D70-25BD-4D7D-92B8-9EDD0050611F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,5 +36,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{369513B6-E403-4C69-9455-13FF83D9721D} = {4869C577-B4D8-4245-9E0B-C067DB90C930}
+		{5A02C424-19FD-48C4-8B46-168493DFF863} = {C6072D70-25BD-4D7D-92B8-9EDD0050611F}
 	EndGlobalSection
 EndGlobal
