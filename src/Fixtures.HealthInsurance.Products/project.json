@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0-*",
+  "description": "Fixtures.HealthInsurance.Products Class Library",
+  "authors": [ "svivero" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+  "frameworks": {
+    "net451": {
+      "dependencies": {
+        "Faker.Net": "1.0.3"
+      }
+    }
+  },
+  "dependencies": {
+    "NBuilder": "3.0.1.1"
+  }
+}
