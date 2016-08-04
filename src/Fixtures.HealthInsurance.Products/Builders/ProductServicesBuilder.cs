@@ -6,10 +6,10 @@ namespace Fixtures.HealthInsurance.Products.Builders
 {
     public class ProductServicesBuilder
     {
-        public static IListBuilder<ProductService> GetDefaultHospitalServices()
+        public static IListBuilder<ProductServiceDto> GetDefaultHospitalServices()
         {
             var generator = new UniqueRandomGenerator();
-            var mock = Builder<ProductService>
+            var mock = Builder<ProductServiceDto>
                 .CreateListOfSize(10)
                 .All()
                 .With(item => item.Description = Lorem.Paragraph(1))
@@ -45,34 +45,34 @@ namespace Fixtures.HealthInsurance.Products.Builders
                 .With(
                     item =>
                         item.CoverType =
-                            Pick<ProductServiceCoverType>.RandomItemFrom(new[]
+                            Pick<ProductServiceCoverTypeDto>.RandomItemFrom(new[]
                             {
-                                ProductServiceCoverType.CoveredWithCondition,
-                                ProductServiceCoverType.FullyCovered,
-                                ProductServiceCoverType.MinimumBenefit,
-                                ProductServiceCoverType.NotCovered,
+                                ProductServiceCoverTypeDto.CoveredWithCondition,
+                                ProductServiceCoverTypeDto.FullyCovered,
+                                ProductServiceCoverTypeDto.MinimumBenefit,
+                                ProductServiceCoverTypeDto.NotCovered,
                             }))
                 .With(
                     item =>
                         item.ProviderType =
-                            Pick<ProductServiceProviderType>.RandomItemFrom(new[]
+                            Pick<ProductServiceProviderTypeDto>.RandomItemFrom(new[]
                             {
-                                ProductServiceProviderType.AllProviders,
-                                ProductServiceProviderType.MemberFirst,
-                                ProductServiceProviderType.NonMembersFirst
+                                ProductServiceProviderTypeDto.AllProviders,
+                                ProductServiceProviderTypeDto.MemberFirst,
+                                ProductServiceProviderTypeDto.NonMembersFirst
                             }))
                 .With(
                     item =>
-                        item.Type = ProductServiceType.Hospital)
+                        item.Type = ProductServiceTypeDto.Hospital)
                 .With(item => item.Limit = LimitBuilder.GetDefault().Build());
 
             return mock;
         }
 
-        public static IListBuilder<ProductService> GetDefaultExtrasServices()
+        public static IListBuilder<ProductServiceDto> GetDefaultExtrasServices()
         {
             var generator = new UniqueRandomGenerator();
-            var mock = Builder<ProductService>
+            var mock = Builder<ProductServiceDto>
                 .CreateListOfSize(10)
                 .All()
                 .With(item => item.Description = Lorem.Paragraph(1))
@@ -105,25 +105,25 @@ namespace Fixtures.HealthInsurance.Products.Builders
                 .With(
                     item =>
                         item.CoverType =
-                            Pick<ProductServiceCoverType>.RandomItemFrom(new[]
+                            Pick<ProductServiceCoverTypeDto>.RandomItemFrom(new[]
                             {
-                                ProductServiceCoverType.CoveredWithCondition,
-                                ProductServiceCoverType.FullyCovered,
-                                ProductServiceCoverType.MinimumBenefit,
-                                ProductServiceCoverType.NotCovered,
+                                ProductServiceCoverTypeDto.CoveredWithCondition,
+                                ProductServiceCoverTypeDto.FullyCovered,
+                                ProductServiceCoverTypeDto.MinimumBenefit,
+                                ProductServiceCoverTypeDto.NotCovered,
                             }))
                 .With(
                     item =>
                         item.ProviderType =
-                            Pick<ProductServiceProviderType>.RandomItemFrom(new[]
+                            Pick<ProductServiceProviderTypeDto>.RandomItemFrom(new[]
                             {
-                                ProductServiceProviderType.AllProviders,
-                                ProductServiceProviderType.MemberFirst,
-                                ProductServiceProviderType.NonMembersFirst
+                                ProductServiceProviderTypeDto.AllProviders,
+                                ProductServiceProviderTypeDto.MemberFirst,
+                                ProductServiceProviderTypeDto.NonMembersFirst
                             }))
                 .With(
                     item =>
-                        item.Type = ProductServiceType.Extras)
+                        item.Type = ProductServiceTypeDto.Extras)
                 .With(item => item.Limit = LimitBuilder.GetDefault().Build());
 
             return mock;
