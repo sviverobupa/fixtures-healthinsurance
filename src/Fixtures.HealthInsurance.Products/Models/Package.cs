@@ -8,5 +8,10 @@ namespace Fixtures.HealthInsurance.Products.Models
         public Product Hospital { get; set; }
         public Product Extras { get; set; }
         public PackageType PackageType { get; set; }
+
+        // TODO: Map to FamilyType
+        // TODO: Excess options
+        // TODO: List of features
+        // TODO: Link to PDF
     }
 }

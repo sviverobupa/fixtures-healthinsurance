@@ -7,5 +7,7 @@
         public string Description { get; set; }
         public ProductService[] Services { get; set; }
         public ProductType ProductType { get; set; }
+
+        // TODO: Product detail ie What is covered, What is not covered, Useful information
     }
 }
