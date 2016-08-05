@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net451": {
+      "wrappedProject": "../../src/Fixtures.HealthInsurance.Products/Fixtures.HealthInsurance.Products.csproj",
+      "bin": {
+        "assembly": "../../src/Fixtures.HealthInsurance.Products/obj/{configuration}/Fixtures.HealthInsurance.Products.dll",
+        "pdb": "../../src/Fixtures.HealthInsurance.Products/obj/{configuration}/Fixtures.HealthInsurance.Products.pdb"
+      },
+      "dependencies": {
+        "Faker.Net": "1.0.3",
+        "NBuilder": "3.0.1.1"
+      }
+    }
+  }
+}

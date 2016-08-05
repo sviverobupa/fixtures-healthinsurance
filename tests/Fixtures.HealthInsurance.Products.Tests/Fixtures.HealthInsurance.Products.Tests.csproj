@@ -39,10 +39,6 @@
       <HintPath>..\packages\Faker.Net.1.0.3\lib\net40\Faker.NET4.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fixtures.HealthInsurance.Products, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Fixtures.HealthInsurance.Products.1.0.1\lib\net451\Fixtures.HealthInsurance.Products.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="FizzWare.NBuilder, Version=3.0.1.0, Culture=neutral, PublicKeyToken=5651b03e12e42c12, processorArchitecture=MSIL">
       <HintPath>..\packages\NBuilder.3.0.1.1\lib\FizzWare.NBuilder.dll</HintPath>
       <Private>True</Private>
@@ -68,6 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Fixtures.HealthInsurance.Products\Fixtures.HealthInsurance.Products.csproj">
+      <Project>{a8344395-6d3d-48b6-970a-6aeb5501f1e0}</Project>
+      <Name>Fixtures.HealthInsurance.Products</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

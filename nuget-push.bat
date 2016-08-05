@@ -1,0 +1,2 @@
+nuget push "C:\git\fixtures-healthinsurance\artifacts\bin\Fixtures.HealthInsurance.Products-nuget\Debug\Fixtures.HealthInsurance.Products-nuget.1.0.2.nupkg" -Source https://www.nuget.org/api/v2/package
+pause

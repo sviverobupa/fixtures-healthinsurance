@@ -14,6 +14,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fixtures.HealthInsurance.Pr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{003FBECF-42C0-4DB8-A011-FB10FF9E3297}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fixtures.HealthInsurance.Products", "src\Fixtures.HealthInsurance.Products\Fixtures.HealthInsurance.Products.csproj", "{A8344395-6D3D-48B6-970A-6AEB5501F1E0}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Fixtures.HealthInsurance.Products-nuget", "src\Fixtures.HealthInsurance.Products-nuget\Fixtures.HealthInsurance.Products-nuget.xproj", "{BBFEE2F3-4F94-494E-A991-56CA9CA6C615}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,11 +28,21 @@ Global
 		{5A02C424-19FD-48C4-8B46-168493DFF863}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A02C424-19FD-48C4-8B46-168493DFF863}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A02C424-19FD-48C4-8B46-168493DFF863}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8344395-6D3D-48B6-970A-6AEB5501F1E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8344395-6D3D-48B6-970A-6AEB5501F1E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8344395-6D3D-48B6-970A-6AEB5501F1E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8344395-6D3D-48B6-970A-6AEB5501F1E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBFEE2F3-4F94-494E-A991-56CA9CA6C615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBFEE2F3-4F94-494E-A991-56CA9CA6C615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBFEE2F3-4F94-494E-A991-56CA9CA6C615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBFEE2F3-4F94-494E-A991-56CA9CA6C615}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5A02C424-19FD-48C4-8B46-168493DFF863} = {003FBECF-42C0-4DB8-A011-FB10FF9E3297}
+		{A8344395-6D3D-48B6-970A-6AEB5501F1E0} = {4869C577-B4D8-4245-9E0B-C067DB90C930}
+		{BBFEE2F3-4F94-494E-A991-56CA9CA6C615} = {4869C577-B4D8-4245-9E0B-C067DB90C930}
 	EndGlobalSection
 EndGlobal
