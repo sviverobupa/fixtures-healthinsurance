@@ -19,7 +19,6 @@ namespace Fixtures.HealthInsurance.Products.Tests
                 Trace.WriteLine($"item.Id: {item.Id}");
                 Trace.WriteLine($"item.Price: {item.Price}");
                 Trace.WriteLine($"item.Hospital.Name: {item.Hospital.Name}");
-                Trace.WriteLine($"item.Hospital.Description: {item.Hospital.Description}");
 
                 foreach (var hospitalService in item.Hospital.Services)
                 {

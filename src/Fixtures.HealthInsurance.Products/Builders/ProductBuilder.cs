@@ -36,7 +36,9 @@ namespace Fixtures.HealthInsurance.Products.Builders
                     "Live Well $250 Hospital",
                     "Live Well $500 Hospital"
                 }))
-                .With(item => item.Description = Lorem.Paragraph(3))
+                .With(item => item.CoverDescription = Lorem.Paragraph(RandomNumber.Next(5, 15)))
+                .With(item => item.NotCoveredDescription = Lorem.Paragraph(RandomNumber.Next(5, 15)))
+                .With(item => item.OtherInformation = Lorem.Paragraph(RandomNumber.Next(5, 15)))
                 .With(c => c.Services = ProductServicesBuilder.GetDefaultHospitalServices().ToArray())
                 .With(item => item.ProductType = ProductTypeDto.Hospital);
             return mock.Build();
@@ -70,7 +72,9 @@ namespace Fixtures.HealthInsurance.Products.Builders
                     "Established Family Ancillary Cover",
                     "Live Well Ancillary Cover"
                 }))
-                .With(item => item.Description = Lorem.Paragraph(3))
+                .With(item => item.CoverDescription = Lorem.Paragraph(RandomNumber.Next(5, 15)))
+                .With(item => item.NotCoveredDescription = Lorem.Paragraph(RandomNumber.Next(5, 15)))
+                .With(item => item.OtherInformation = Lorem.Paragraph(RandomNumber.Next(5, 15)))
                 .With(c => c.Services = ProductServicesBuilder.GetDefaultExtrasServices().ToArray())
                 .With(item => item.ProductType = ProductTypeDto.Extras);
             return mock.Build();

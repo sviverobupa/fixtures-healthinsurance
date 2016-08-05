@@ -13,7 +13,12 @@ namespace Fixtures.HealthInsurance.Products.Builders
                 .All()
                 .With(c => c.Price = RandomNumber.Next(50, 100))
                 .With(c => c.Hospital = ProductBuilder.GetDefaultHospital())
-                .With(c => c.Extras = ProductBuilder.GetDefaultExtras());
+                .With(c => c.Extras = ProductBuilder.GetDefaultExtras())
+                .With(
+                    c =>
+                        c.Name =
+                            c.Hospital.Name +
+                            (!string.IsNullOrEmpty(c.Extras.Name) ? " with " + c.Extras.Name : string.Empty));
             return mock.Build();
         }
     }
