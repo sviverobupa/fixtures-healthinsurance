@@ -6,7 +6,21 @@ namespace Fixtures.HealthInsurance.Products.Builders
 {
     public class LimitBuilder
     {
-        public static LimitDto GetDefault()
+        public static LimitDto GetHospitalDefault()
+        {
+            var mock = Builder<LimitDto>
+                .CreateNew()
+                .With(c => c.Amount = null)
+                .With(c => c.ConditionDescription = Lorem.Sentence())
+                .With(c => c.LimitType = Pick<LimitTypeDto>.RandomItemFrom(new[]
+                {
+                    LimitTypeDto.PM,
+                    LimitTypeDto.PP,
+                }));
+            return mock.Build();
+        }
+
+        public static LimitDto GetExtrasDefault()
         {
             var mock = Builder<LimitDto>
                 .CreateNew()
@@ -15,8 +29,6 @@ namespace Fixtures.HealthInsurance.Products.Builders
                 .With(c => c.LimitType = Pick<LimitTypeDto>.RandomItemFrom(new[]
                 {
                     LimitTypeDto.LLPP,
-                    LimitTypeDto.PM,
-                    LimitTypeDto.PP,
                     LimitTypeDto.Y1PPLM,
                     LimitTypeDto.Y2PPLM,
                     LimitTypeDto.Y3PPLM,

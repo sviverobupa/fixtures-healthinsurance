@@ -65,7 +65,7 @@ namespace Fixtures.HealthInsurance.Products.Builders
                 .With(
                     item =>
                         item.Type = ProductServiceTypeDto.Hospital)
-                .With(item => item.Limit = LimitBuilder.GetDefault());
+                .With(item => item.Limit = LimitBuilder.GetHospitalDefault());
 
             return mock.Build();
         }
@@ -125,7 +125,7 @@ namespace Fixtures.HealthInsurance.Products.Builders
                 .With(
                     item =>
                         item.Type = ProductServiceTypeDto.Extras)
-                .With(item => item.Limit = LimitBuilder.GetDefault());
+                .With(item => item.Limit = LimitBuilder.GetExtrasDefault());
 
             return mock.Build();
         }
