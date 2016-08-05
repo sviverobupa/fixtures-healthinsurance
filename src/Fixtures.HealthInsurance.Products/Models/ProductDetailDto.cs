@@ -8,9 +8,9 @@ namespace Fixtures.HealthInsurance.Products.Models
         public ProductDto Hospital { get; set; }
         public ProductDto Extras { get; set; }
         public PackageTypeDto PackageType { get; set; }
+        public int[] ExcessOptions { get; set; }
 
         // TODO: Map to FamilyType
-        // TODO: Excess options
         // TODO: List of features
         // TODO: Link to PDF
     }

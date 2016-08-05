@@ -18,7 +18,8 @@ namespace Fixtures.HealthInsurance.Products.Builders
                     c =>
                         c.Name =
                             c.Hospital.Name +
-                            (!string.IsNullOrEmpty(c.Extras.Name) ? " with " + c.Extras.Name : string.Empty));
+                            (!string.IsNullOrEmpty(c.Extras.Name) ? " with " + c.Extras.Name : string.Empty))
+                .With(c => c.ExcessOptions = new []{ 100, 200, 300 });
             return mock.Build();
         }
     }
