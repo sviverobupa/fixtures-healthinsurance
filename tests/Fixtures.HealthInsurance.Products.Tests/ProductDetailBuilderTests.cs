@@ -10,7 +10,7 @@ namespace Fixtures.HealthInsurance.Products.Tests
         [TestMethod]
         public void GetDefault_NotNull()
         {
-            var package = ProductDetailBuilder.GetDefault().Build();
+            var package = ProductDetailBuilder.GetDefault();
             Assert.IsNotNull(package);
 
             // echo some values

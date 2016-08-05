@@ -6,7 +6,7 @@ namespace Fixtures.HealthInsurance.Products.Builders
 {
     public class LimitBuilder
     {
-        public static ISingleObjectBuilder<LimitDto> GetDefault()
+        public static LimitDto GetDefault()
         {
             var mock = Builder<LimitDto>
                 .CreateNew()
@@ -22,7 +22,7 @@ namespace Fixtures.HealthInsurance.Products.Builders
                     LimitTypeDto.Y3PPLM,
                     LimitTypeDto.Y4PPLM
                 }));
-            return mock;
+            return mock.Build();
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Fixtures.HealthInsurance.Products.Builders
 {
     public class ProductBuilder
     {
-        public static ISingleObjectBuilder<ProductDto> GetDefaultHospital()
+        public static ProductDto GetDefaultHospital()
         {
             var mock = Builder<ProductDto>
                 .CreateNew()
@@ -37,12 +37,12 @@ namespace Fixtures.HealthInsurance.Products.Builders
                     "Live Well $500 Hospital"
                 }))
                 .With(item => item.Description = Lorem.Paragraph(3))
-                .With(c => c.Services = ProductServicesBuilder.GetDefaultHospitalServices().Build().ToArray())
+                .With(c => c.Services = ProductServicesBuilder.GetDefaultHospitalServices().ToArray())
                 .With(item => item.ProductType = ProductTypeDto.Hospital);
-            return mock;
+            return mock.Build();
         }
 
-        public static ISingleObjectBuilder<ProductDto> GetDefaultExtras()
+        public static ProductDto GetDefaultExtras()
         {
             var mock = Builder<ProductDto>
                 .CreateNew()
@@ -71,9 +71,9 @@ namespace Fixtures.HealthInsurance.Products.Builders
                     "Live Well Ancillary Cover"
                 }))
                 .With(item => item.Description = Lorem.Paragraph(3))
-                .With(c => c.Services = ProductServicesBuilder.GetDefaultExtrasServices().Build().ToArray())
+                .With(c => c.Services = ProductServicesBuilder.GetDefaultExtrasServices().ToArray())
                 .With(item => item.ProductType = ProductTypeDto.Extras);
-            return mock;
+            return mock.Build();
         }
     }
 }

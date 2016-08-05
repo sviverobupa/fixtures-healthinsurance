@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Faker;
 using Fixtures.HealthInsurance.Products.Models;
 using FizzWare.NBuilder;
@@ -6,7 +7,7 @@ namespace Fixtures.HealthInsurance.Products.Builders
 {
     public class ProductServicesBuilder
     {
-        public static IListBuilder<ProductServiceDto> GetDefaultHospitalServices()
+        public static IList<ProductServiceDto> GetDefaultHospitalServices()
         {
             var generator = new UniqueRandomGenerator();
             var mock = Builder<ProductServiceDto>
@@ -64,12 +65,12 @@ namespace Fixtures.HealthInsurance.Products.Builders
                 .With(
                     item =>
                         item.Type = ProductServiceTypeDto.Hospital)
-                .With(item => item.Limit = LimitBuilder.GetDefault().Build());
+                .With(item => item.Limit = LimitBuilder.GetDefault());
 
-            return mock;
+            return mock.Build();
         }
 
-        public static IListBuilder<ProductServiceDto> GetDefaultExtrasServices()
+        public static IList<ProductServiceDto> GetDefaultExtrasServices()
         {
             var generator = new UniqueRandomGenerator();
             var mock = Builder<ProductServiceDto>
@@ -124,9 +125,9 @@ namespace Fixtures.HealthInsurance.Products.Builders
                 .With(
                     item =>
                         item.Type = ProductServiceTypeDto.Extras)
-                .With(item => item.Limit = LimitBuilder.GetDefault().Build());
+                .With(item => item.Limit = LimitBuilder.GetDefault());
 
-            return mock;
+            return mock.Build();
         }
     }
 }
